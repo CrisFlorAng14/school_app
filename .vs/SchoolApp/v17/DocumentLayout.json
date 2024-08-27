@@ -1,0 +1,70 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\FLORES ANGUIANO\\Documents\\Visual Studio 2022\\Projects\\SchoolApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AE1D4D9D-75AE-43A8-805A-0D884A77DF20}|SchoolApp.csproj|c:\\users\\flores anguiano\\documents\\visual studio 2022\\projects\\schoolapp\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE1D4D9D-75AE-43A8-805A-0D884A77DF20}|SchoolApp.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE1D4D9D-75AE-43A8-805A-0D884A77DF20}|SchoolApp.csproj|c:\\users\\flores anguiano\\documents\\visual studio 2022\\projects\\schoolapp\\connection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE1D4D9D-75AE-43A8-805A-0D884A77DF20}|SchoolApp.csproj|solutionrelative:connection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE1D4D9D-75AE-43A8-805A-0D884A77DF20}|SchoolApp.csproj|c:\\users\\flores anguiano\\documents\\visual studio 2022\\projects\\schoolapp\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AE1D4D9D-75AE-43A8-805A-0D884A77DF20}|SchoolApp.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\FLORES ANGUIANO\\Documents\\Visual Studio 2022\\Projects\\SchoolApp\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\FLORES ANGUIANO\\Documents\\Visual Studio 2022\\Projects\\SchoolApp\\Form1.cs",
+              "RelativeToolTip": "Form1.cs",
+              "ViewState": "AQIAADgAAAAAAAAAAADwv0oAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-27T05:39:09.123Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Connection.cs",
+              "DocumentMoniker": "C:\\Users\\FLORES ANGUIANO\\Documents\\Visual Studio 2022\\Projects\\SchoolApp\\Connection.cs",
+              "RelativeDocumentMoniker": "Connection.cs",
+              "ToolTip": "C:\\Users\\FLORES ANGUIANO\\Documents\\Visual Studio 2022\\Projects\\SchoolApp\\Connection.cs",
+              "RelativeToolTip": "Connection.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAADwvxgAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-27T05:25:58.281Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form1.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\FLORES ANGUIANO\\Documents\\Visual Studio 2022\\Projects\\SchoolApp\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\FLORES ANGUIANO\\Documents\\Visual Studio 2022\\Projects\\SchoolApp\\Form1.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Form1.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-27T04:06:51.632Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
