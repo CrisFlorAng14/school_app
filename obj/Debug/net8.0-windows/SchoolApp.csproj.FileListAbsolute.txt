@@ -32,3 +32,5 @@ C:\Users\FLORES ANGUIANO\Documents\Visual Studio 2022\Projects\SchoolApp\bin\Deb
 C:\Users\FLORES ANGUIANO\Documents\Visual Studio 2022\Projects\SchoolApp\bin\Debug\net8.0-windows\runtimes\win-x64\native\k5sprt64.dll
 C:\Users\FLORES ANGUIANO\Documents\Visual Studio 2022\Projects\SchoolApp\bin\Debug\net8.0-windows\runtimes\win-x64\native\krb5_64.dll
 C:\Users\FLORES ANGUIANO\Documents\Visual Studio 2022\Projects\SchoolApp\bin\Debug\net8.0-windows\runtimes\win-x64\native\krbcc64.dll
+C:\Users\FLORES ANGUIANO\Documents\Visual Studio 2022\Projects\SchoolApp\obj\Debug\net8.0-windows\SchoolApp.sourcelink.json
+C:\Users\FLORES ANGUIANO\Documents\Visual Studio 2022\Projects\SchoolApp\obj\Debug\net8.0-windows\SchoolApp.FrmStudents.resources

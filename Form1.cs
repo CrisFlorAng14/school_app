@@ -11,8 +11,13 @@ namespace SchoolApp
         {
             InitializeComponent();
         }
+        // Función para cerrar la aplicación
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
         // Llamada para establecer conexión con la BD
-        MySqlConnection dbConnection = Connection.connection();
+        MySqlConnection dbConnection = ConnectionDB.connection();
         /**
          * Función para iniciar sesión
          * Entradas: Credenciales [Usuario, Contraseña]
@@ -60,14 +65,14 @@ namespace SchoolApp
                         }
                         else // Si el usuario existe pero la contraseña es incorrecta
                         {
-                            MessageBox.Show("Contraseña incorrecta");
+                            MessageBox.Show("Contraseña incorrecta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             txtPass.Clear();
                         }
                     }
                 }
                 else // Si el usuario no existe
                 {
-                    MessageBox.Show("No hay registro de usuario");
+                    MessageBox.Show("Usuario no encontrado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txtUser.Clear();
                     txtPass.Clear();
                 }
@@ -87,5 +92,13 @@ namespace SchoolApp
             }
         }
 
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            DialogResult msgExit = MessageBox.Show("¿Estás seguro(a) de cerrar sesión?", "Cerrar sesión", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if(msgExit == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
     }
 }

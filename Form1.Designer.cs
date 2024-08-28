@@ -30,7 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             pnlHead = new Panel();
+            btnClose = new FontAwesome.Sharp.IconButton();
             imgLogo = new PictureBox();
+            panel1 = new Panel();
             pnlBody = new Panel();
             iconButton1 = new FontAwesome.Sharp.IconButton();
             label1 = new Label();
@@ -41,6 +43,7 @@
             iconUser = new FontAwesome.Sharp.IconPictureBox();
             pnlHead.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)imgLogo).BeginInit();
+            panel1.SuspendLayout();
             pnlBody.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)iconUser).BeginInit();
@@ -48,25 +51,51 @@
             // 
             // pnlHead
             // 
-            pnlHead.BackColor = Color.White;
-            pnlHead.Controls.Add(imgLogo);
+            pnlHead.BackColor = Color.FromArgb(4, 58, 96);
+            pnlHead.Controls.Add(btnClose);
             pnlHead.Dock = DockStyle.Top;
             pnlHead.Location = new Point(0, 0);
             pnlHead.Name = "pnlHead";
-            pnlHead.Size = new Size(541, 91);
-            pnlHead.TabIndex = 1;
+            pnlHead.Size = new Size(541, 27);
+            pnlHead.TabIndex = 0;
+            // 
+            // btnClose
+            // 
+            btnClose.Cursor = Cursors.Hand;
+            btnClose.Dock = DockStyle.Right;
+            btnClose.FlatStyle = FlatStyle.Flat;
+            btnClose.ForeColor = Color.White;
+            btnClose.IconChar = FontAwesome.Sharp.IconChar.X;
+            btnClose.IconColor = Color.White;
+            btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnClose.IconSize = 25;
+            btnClose.Location = new Point(509, 0);
+            btnClose.Name = "btnClose";
+            btnClose.Size = new Size(32, 27);
+            btnClose.TabIndex = 0;
+            btnClose.UseVisualStyleBackColor = true;
+            btnClose.Click += btnClose_Click;
             // 
             // imgLogo
             // 
             imgLogo.Anchor = AnchorStyles.None;
             imgLogo.BackColor = Color.Transparent;
             imgLogo.Image = (Image)resources.GetObject("imgLogo.Image");
-            imgLogo.Location = new Point(222, 0);
+            imgLogo.Location = new Point(229, 0);
             imgLogo.Name = "imgLogo";
             imgLogo.Size = new Size(100, 91);
             imgLogo.SizeMode = PictureBoxSizeMode.Zoom;
             imgLogo.TabIndex = 0;
             imgLogo.TabStop = false;
+            // 
+            // panel1
+            // 
+            panel1.Controls.Add(imgLogo);
+            panel1.Dock = DockStyle.Top;
+            panel1.Location = new Point(0, 27);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(541, 91);
+            panel1.TabIndex = 0;
             // 
             // pnlBody
             // 
@@ -79,13 +108,14 @@
             pnlBody.Controls.Add(iconPictureBox1);
             pnlBody.Controls.Add(iconUser);
             pnlBody.Dock = DockStyle.Fill;
-            pnlBody.Location = new Point(0, 91);
+            pnlBody.Location = new Point(0, 118);
             pnlBody.Name = "pnlBody";
-            pnlBody.Size = new Size(541, 365);
-            pnlBody.TabIndex = 2;
+            pnlBody.Size = new Size(541, 338);
+            pnlBody.TabIndex = 0;
             // 
             // iconButton1
             // 
+            iconButton1.Anchor = AnchorStyles.None;
             iconButton1.BackColor = Color.Transparent;
             iconButton1.Cursor = Cursors.Hand;
             iconButton1.FlatAppearance.BorderSize = 0;
@@ -97,65 +127,70 @@
             iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButton1.IconSize = 24;
             iconButton1.ImageAlign = ContentAlignment.MiddleLeft;
-            iconButton1.Location = new Point(454, 322);
+            iconButton1.Location = new Point(473, 304);
             iconButton1.Name = "iconButton1";
             iconButton1.Size = new Size(65, 31);
-            iconButton1.TabIndex = 6;
+            iconButton1.TabIndex = 4;
             iconButton1.Text = "Salir";
-            iconButton1.TextAlign = ContentAlignment.MiddleRight;
+            iconButton1.TextAlign = ContentAlignment.MiddleLeft;
+            iconButton1.TextImageRelation = TextImageRelation.ImageBeforeText;
             iconButton1.UseVisualStyleBackColor = false;
+            iconButton1.Click += iconButton1_Click;
             // 
             // label1
             // 
+            label1.Anchor = AnchorStyles.None;
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
             label1.FlatStyle = FlatStyle.Flat;
-            label1.Font = new Font("Franklin Gothic Medium Cond", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Franklin Gothic Medium Cond", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.Location = new Point(200, 27);
             label1.Name = "label1";
-            label1.Size = new Size(153, 26);
+            label1.Size = new Size(154, 28);
             label1.TabIndex = 5;
             label1.Text = "INICIO DE SESIÓN";
             // 
             // txtPass
             // 
-            txtPass.Font = new Font("Franklin Gothic Book", 11.25F);
+            txtPass.Anchor = AnchorStyles.None;
+            txtPass.Font = new Font("Franklin Gothic Book", 12F);
             txtPass.Location = new Point(131, 158);
-            txtPass.Multiline = true;
             txtPass.Name = "txtPass";
             txtPass.PasswordChar = '•';
             txtPass.PlaceholderText = "Contraseña";
-            txtPass.Size = new Size(331, 38);
-            txtPass.TabIndex = 4;
+            txtPass.Size = new Size(331, 26);
+            txtPass.TabIndex = 2;
             // 
             // txtUser
             // 
-            txtUser.Font = new Font("Franklin Gothic Book", 11.25F);
+            txtUser.Anchor = AnchorStyles.None;
+            txtUser.Font = new Font("Franklin Gothic Book", 12F);
             txtUser.Location = new Point(131, 98);
-            txtUser.Multiline = true;
             txtUser.Name = "txtUser";
             txtUser.PlaceholderText = "Usuario";
-            txtUser.Size = new Size(331, 38);
-            txtUser.TabIndex = 3;
+            txtUser.Size = new Size(331, 26);
+            txtUser.TabIndex = 1;
             // 
             // btnLogin
             // 
+            btnLogin.Anchor = AnchorStyles.None;
             btnLogin.BackColor = Color.FromArgb(4, 58, 96);
             btnLogin.Cursor = Cursors.Hand;
             btnLogin.FlatAppearance.BorderSize = 0;
             btnLogin.FlatStyle = FlatStyle.Flat;
-            btnLogin.Font = new Font("Franklin Gothic Medium Cond", 9F, FontStyle.Bold);
+            btnLogin.Font = new Font("Franklin Gothic Medium Cond", 11F, FontStyle.Bold);
             btnLogin.ForeColor = Color.White;
-            btnLogin.Location = new Point(190, 243);
+            btnLogin.Location = new Point(191, 224);
             btnLogin.Name = "btnLogin";
             btnLogin.Size = new Size(163, 49);
-            btnLogin.TabIndex = 2;
+            btnLogin.TabIndex = 3;
             btnLogin.Text = "INGRESAR";
             btnLogin.UseVisualStyleBackColor = false;
             btnLogin.Click += btnLogin_Click;
             // 
             // iconPictureBox1
             // 
+            iconPictureBox1.Anchor = AnchorStyles.None;
             iconPictureBox1.BackColor = Color.Transparent;
             iconPictureBox1.ForeColor = Color.FromArgb(4, 58, 96);
             iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Key;
@@ -170,6 +205,7 @@
             // 
             // iconUser
             // 
+            iconUser.Anchor = AnchorStyles.None;
             iconUser.BackColor = Color.Transparent;
             iconUser.ForeColor = Color.FromArgb(4, 58, 96);
             iconUser.IconChar = FontAwesome.Sharp.IconChar.User;
@@ -186,15 +222,19 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             ClientSize = new Size(541, 456);
             Controls.Add(pnlBody);
+            Controls.Add(panel1);
             Controls.Add(pnlHead);
+            FormBorderStyle = FormBorderStyle.None;
             IsMdiContainer = true;
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FrmLogin";
             pnlHead.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)imgLogo).EndInit();
+            panel1.ResumeLayout(false);
             pnlBody.ResumeLayout(false);
             pnlBody.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)iconPictureBox1).EndInit();
@@ -206,13 +246,15 @@
 
         private Panel pnlHead;
         private PictureBox imgLogo;
+        private FontAwesome.Sharp.IconButton btnClose;
+        private Panel panel1;
         private Panel pnlBody;
-        private FontAwesome.Sharp.IconPictureBox iconUser;
-        private Button btnLogin;
-        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
+        private FontAwesome.Sharp.IconButton iconButton1;
+        private Label label1;
         private TextBox txtPass;
         private TextBox txtUser;
-        private Label label1;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private Button btnLogin;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
+        private FontAwesome.Sharp.IconPictureBox iconUser;
     }
 }
