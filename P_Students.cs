@@ -16,7 +16,11 @@ namespace SchoolApp
         public string gender { get; set; }
         public string email_contact { get; set; }
         public string phone { get; set; }
-        public string address { get; set; }
-        public string numControl {  get; set; }
+        
+        public string street {  get; set; }
+        public string number {  get; set; }
+        public string colony { get; set; }
+        public string municipality {  get; set; }
+        public string cp { get; set; }
     }
 }

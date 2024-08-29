@@ -296,6 +296,7 @@
             btnSave.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnSave.UseVisualStyleBackColor = true;
             btnSave.Visible = false;
+            btnSave.Click += btnSave_Click;
             // 
             // btnCancel
             // 
@@ -361,6 +362,7 @@
             btnDeleteStudent.TextAlign = ContentAlignment.MiddleLeft;
             btnDeleteStudent.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnDeleteStudent.UseVisualStyleBackColor = false;
+            btnDeleteStudent.Click += btnDeleteStudent_Click;
             // 
             // btnSearch
             // 
