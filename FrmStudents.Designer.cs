@@ -50,7 +50,11 @@
             txtMunicipality = new TextBox();
             txtCP = new TextBox();
             txtSearch = new TextBox();
-            iconButton1 = new FontAwesome.Sharp.IconButton();
+            btnSave = new FontAwesome.Sharp.IconButton();
+            btnCancel = new FontAwesome.Sharp.IconButton();
+            btnUpdate = new FontAwesome.Sharp.IconButton();
+            btnDeleteStudent = new FontAwesome.Sharp.IconButton();
+            btnSearch = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)tblStudents).BeginInit();
             SuspendLayout();
             // 
@@ -184,6 +188,7 @@
             btnAddStudent.Cursor = Cursors.Hand;
             btnAddStudent.FlatAppearance.BorderColor = Color.FromArgb(30, 133, 13);
             btnAddStudent.FlatStyle = FlatStyle.Flat;
+            btnAddStudent.Font = new Font("Franklin Gothic Book", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnAddStudent.ForeColor = Color.White;
             btnAddStudent.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
             btnAddStudent.IconColor = Color.White;
@@ -193,7 +198,7 @@
             btnAddStudent.Location = new Point(558, 203);
             btnAddStudent.Name = "btnAddStudent";
             btnAddStudent.Size = new Size(87, 32);
-            btnAddStudent.TabIndex = 13;
+            btnAddStudent.TabIndex = 15;
             btnAddStudent.Text = "Agregar";
             btnAddStudent.TextAlign = ContentAlignment.MiddleLeft;
             btnAddStudent.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -270,34 +275,121 @@
             txtSearch.Location = new Point(18, 164);
             txtSearch.Name = "txtSearch";
             txtSearch.PlaceholderText = "Buscar";
-            txtSearch.Size = new Size(581, 21);
+            txtSearch.Size = new Size(335, 21);
             txtSearch.TabIndex = 13;
             // 
-            // iconButton1
+            // btnSave
             // 
-            iconButton1.BackColor = Color.FromArgb(4, 58, 96);
-            iconButton1.Cursor = Cursors.Hand;
-            iconButton1.FlatAppearance.BorderColor = Color.White;
-            iconButton1.FlatStyle = FlatStyle.Flat;
-            iconButton1.ForeColor = Color.White;
-            iconButton1.IconChar = FontAwesome.Sharp.IconChar.Search;
-            iconButton1.IconColor = Color.White;
-            iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton1.IconSize = 20;
-            iconButton1.Location = new Point(605, 158);
-            iconButton1.Name = "iconButton1";
-            iconButton1.Size = new Size(40, 33);
-            iconButton1.TabIndex = 14;
-            iconButton1.TextAlign = ContentAlignment.MiddleLeft;
-            iconButton1.UseVisualStyleBackColor = false;
-            iconButton1.Click += iconButton1_Click;
+            btnSave.Cursor = Cursors.Hand;
+            btnSave.Font = new Font("Franklin Gothic Book", 9F);
+            btnSave.IconChar = FontAwesome.Sharp.IconChar.Check;
+            btnSave.IconColor = Color.Black;
+            btnSave.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnSave.IconSize = 20;
+            btnSave.ImageAlign = ContentAlignment.MiddleLeft;
+            btnSave.Location = new Point(459, 161);
+            btnSave.Name = "btnSave";
+            btnSave.Size = new Size(91, 27);
+            btnSave.TabIndex = 15;
+            btnSave.Text = "Guardar";
+            btnSave.TextAlign = ContentAlignment.MiddleLeft;
+            btnSave.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnSave.UseVisualStyleBackColor = true;
+            btnSave.Visible = false;
+            // 
+            // btnCancel
+            // 
+            btnCancel.Cursor = Cursors.Hand;
+            btnCancel.Font = new Font("Franklin Gothic Book", 9F);
+            btnCancel.IconChar = FontAwesome.Sharp.IconChar.Cancel;
+            btnCancel.IconColor = Color.Black;
+            btnCancel.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnCancel.IconSize = 20;
+            btnCancel.ImageAlign = ContentAlignment.MiddleLeft;
+            btnCancel.Location = new Point(558, 161);
+            btnCancel.Name = "btnCancel";
+            btnCancel.Size = new Size(87, 27);
+            btnCancel.TabIndex = 16;
+            btnCancel.Text = "Cancelar";
+            btnCancel.TextAlign = ContentAlignment.MiddleLeft;
+            btnCancel.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnCancel.UseVisualStyleBackColor = true;
+            btnCancel.Visible = false;
+            btnCancel.Click += btnCancel_Click;
+            // 
+            // btnUpdate
+            // 
+            btnUpdate.BackColor = Color.FromArgb(4, 58, 96);
+            btnUpdate.Cursor = Cursors.Hand;
+            btnUpdate.FlatAppearance.BorderColor = Color.FromArgb(4, 58, 96);
+            btnUpdate.FlatStyle = FlatStyle.Flat;
+            btnUpdate.Font = new Font("Franklin Gothic Book", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnUpdate.ForeColor = Color.White;
+            btnUpdate.IconChar = FontAwesome.Sharp.IconChar.Pen;
+            btnUpdate.IconColor = Color.White;
+            btnUpdate.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnUpdate.IconSize = 20;
+            btnUpdate.ImageAlign = ContentAlignment.MiddleLeft;
+            btnUpdate.Location = new Point(558, 250);
+            btnUpdate.Name = "btnUpdate";
+            btnUpdate.Size = new Size(87, 32);
+            btnUpdate.TabIndex = 16;
+            btnUpdate.Text = "Modificar";
+            btnUpdate.TextAlign = ContentAlignment.MiddleLeft;
+            btnUpdate.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnUpdate.UseVisualStyleBackColor = false;
+            btnUpdate.Click += btnUpdate_Click;
+            // 
+            // btnDeleteStudent
+            // 
+            btnDeleteStudent.BackColor = Color.FromArgb(193, 33, 15);
+            btnDeleteStudent.Cursor = Cursors.Hand;
+            btnDeleteStudent.FlatAppearance.BorderColor = Color.FromArgb(193, 33, 15);
+            btnDeleteStudent.FlatStyle = FlatStyle.Flat;
+            btnDeleteStudent.Font = new Font("Franklin Gothic Book", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnDeleteStudent.ForeColor = Color.White;
+            btnDeleteStudent.IconChar = FontAwesome.Sharp.IconChar.Trash;
+            btnDeleteStudent.IconColor = Color.White;
+            btnDeleteStudent.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnDeleteStudent.IconSize = 20;
+            btnDeleteStudent.ImageAlign = ContentAlignment.MiddleLeft;
+            btnDeleteStudent.Location = new Point(558, 299);
+            btnDeleteStudent.Name = "btnDeleteStudent";
+            btnDeleteStudent.Size = new Size(87, 32);
+            btnDeleteStudent.TabIndex = 17;
+            btnDeleteStudent.Text = "Eliminar";
+            btnDeleteStudent.TextAlign = ContentAlignment.MiddleLeft;
+            btnDeleteStudent.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnDeleteStudent.UseVisualStyleBackColor = false;
+            // 
+            // btnSearch
+            // 
+            btnSearch.BackColor = SystemColors.Control;
+            btnSearch.Cursor = Cursors.Hand;
+            btnSearch.FlatAppearance.BorderColor = Color.White;
+            btnSearch.ForeColor = Color.White;
+            btnSearch.IconChar = FontAwesome.Sharp.IconChar.Search;
+            btnSearch.IconColor = Color.Black;
+            btnSearch.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnSearch.IconSize = 20;
+            btnSearch.Location = new Point(359, 158);
+            btnSearch.Name = "btnSearch";
+            btnSearch.Size = new Size(40, 33);
+            btnSearch.TabIndex = 18;
+            btnSearch.TextAlign = ContentAlignment.MiddleLeft;
+            btnSearch.UseVisualStyleBackColor = false;
+            btnSearch.Click += btnSearch_Click;
             // 
             // FrmStudents
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(667, 479);
-            Controls.Add(iconButton1);
+            Controls.Add(btnSearch);
+            Controls.Add(btnDeleteStudent);
+            Controls.Add(btnUpdate);
+            Controls.Add(btnCancel);
+            Controls.Add(btnSave);
             Controls.Add(txtSearch);
             Controls.Add(txtCP);
             Controls.Add(txtMunicipality);
@@ -353,6 +445,10 @@
         private TextBox txtMunicipality;
         private TextBox txtCP;
         private TextBox txtSearch;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton btnSave;
+        private FontAwesome.Sharp.IconButton btnCancel;
+        private FontAwesome.Sharp.IconButton btnUpdate;
+        private FontAwesome.Sharp.IconButton btnDeleteStudent;
+        private FontAwesome.Sharp.IconButton btnSearch;
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SchoolApp
 {
-    public class propertiesStudents
+    public class P_Students
     {
         public int id {  get; set; }
         public string name { get; set; }
@@ -17,5 +17,6 @@ namespace SchoolApp
         public string email_contact { get; set; }
         public string phone { get; set; }
         public string address { get; set; }
+        public string numControl {  get; set; }
     }
 }
